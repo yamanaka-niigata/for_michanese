@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>for Michanese</title>
+
+  <script type="text/javascript" language="javascript">
+        function onButtonClick() {
+          target = document.getElementById("output");
+          //target.innerText = document.forms.id_form1.id_textBox1.value;
+          textbox = document.forms.id_form1.id_textBox1.value;
+
+          nu = "ぬ";
+          nn = "ん";
+          saki = "さき";
+          chaki = "ちゃき";
+          ne = "ね";
+          na = "な";
+          nya = "にゃ";
+          a = "あ";
+
+          result_a = textbox.replace(nn,nu);
+          result_a = result_a.replace(saki,chaki);
+          result_a = result_a.replace(ne,nu);
+          result_a = result_a.replace(na,nya);
+          result_b = result_a;
+
+          while(result_b !== textbox){
+            textbox = textbox.replace(nn,nu);
+            textbox = textbox.replace(saki,chaki);
+            textbox = textbox.replace(ne,nu);
+            textbox = textbox.replace(na,nya);
+
+            result_b = result_a.replace(nn,nu);
+            result_b = result_b.replace(saki,chaki);
+            result_b = result_b.replace(ne,nu);
+            result_b = result_b.replace(na,nya);
+          }
+
+          target.innerText = textbox;
+          //target.innerText = document.id_form1.id_textBox1.value;//これでもOK
+        }
+  </script>
+
+</head>
+<body>
+  <h1>みちゃき語変換プログラム</h1>
+  <form name="form1" id="id_form1" action="">
+    <input name="textBox1" id="id_textBox1" type="text" value="" />
+    <input type="button" value="Exec" onclick="onButtonClick();" />
+  </form>
+  <hr/>
+  <div>変換結果↓</div>
+  <hr/>
+  <div id="output"></div>
+  <hr/>
+
+</body>
+</html>
