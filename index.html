@@ -1,8 +1,45 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<head class="fullpage">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>for Michanese</title>
+    <style>
+      .fullpage {
+        background-color: rgb(250, 191, 225);
+      }
+
+      li {
+        list-style: none;
+      }
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+      }
+
+      img{
+ animation: fluffy1 2s ease infinite; 
+}
+@keyframes fluffy1 {
+  0% {
+    transform: translateY(0); }
+  5% {
+    transform: translateY(0); }
+  10% {
+    transform: translateY(0); }
+  20% {
+    transform: translateY(-10px); }
+  25% {
+    transform: translateY(0); }
+  30% {
+    transform: translateY(-10px); }
+  50% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+
+    </style>
 
   <script type="text/javascript" language="javascript">
         function onButtonClick() {
@@ -43,17 +80,23 @@
   </script>
 
 </head>
-<body>
+<body class="fullpage">
   <h1>みちゃき語変換プログラム</h1>
   <form name="form1" id="id_form1" action="">
     <input name="textBox1" id="id_textBox1" type="text" value="" />
     <input type="button" value="Exec" onclick="onButtonClick();" />
   </form>
-  <hr/>
+  <hr color="black">
   <div>変換結果↓</div>
-  <hr/>
+  <hr color="black">
   <div id="output"></div>
-  <hr/>
+  <hr color="black">
+
+  <ul>
+    <li><img src="ame1.jpg" alt="" width="400" height="auto"></li>
+    <li><img src="ame2.png" alt="" width="400" height="auto"></li>
+    <li><img src="ame3.png" alt="" width="400" height="auto"></li>
+  </ul>
 
 </body>
 </html>
