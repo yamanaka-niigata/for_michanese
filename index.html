@@ -5,6 +5,7 @@
     <title>for Michanese</title>
     <style>
       .fullpage {
+        width: 100%;
         background-color: rgb(250, 191, 225);
       }
 
@@ -14,11 +15,18 @@
 
       ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         text-align: center;
       }
 
+      .henkan {
+        font-size: 30px;
+        font-weight: bold;
+      }
+
       img{
+        width:30vw;
+        height:"auto";
  animation: fluffy1 2s ease infinite; 
 }
 @keyframes fluffy1 {
@@ -61,8 +69,8 @@
           result_a = result_a.replace(ne,nu);
           result_a = result_a.replace(na,nya);
           result_b = result_a;
-            
-            num = 0;
+
+          num = 0;
           while(num < 10){
             textbox = textbox.replace(nn,nu);
             textbox = textbox.replace(saki,chaki);
@@ -73,7 +81,7 @@
             result_b = result_b.replace(saki,chaki);
             result_b = result_b.replace(ne,nu);
             result_b = result_b.replace(na,nya);
-              num = num + 1;
+            num = num + 1;
           }
 
           target.innerText = textbox;
@@ -89,15 +97,19 @@
     <input type="button" value="Exec" onclick="onButtonClick();" />
   </form>
   <hr color="black">
-  <div>変換結果↓</div>
+  <div class="henkan">変換結果↓</div>
   <hr color="black">
   <div id="output"></div>
   <hr color="black">
 
   <ul>
-    <li><img src="ame1.jpg" alt="" width="400" height="auto"></li>
+    <!-- <li><img src="ame1.jpg" alt="" width="400" height="auto"></li>
     <li><img src="ame2.png" alt="" width="400" height="auto"></li>
-    <li><img src="ame3.png" alt="" width="400" height="auto"></li>
+    <li><img src="ame3.png" alt="" width="400" height="auto"></li> -->
+
+    <li><img src="ame1.jpg" alt=""></li>
+    <li><img src="ame2.png" alt=""></li>
+    <li><img src="ame3.png" alt=""></li>
   </ul>
 
 </body>
