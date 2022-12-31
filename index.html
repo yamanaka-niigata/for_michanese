@@ -61,8 +61,9 @@
           result_a = result_a.replace(ne,nu);
           result_a = result_a.replace(na,nya);
           result_b = result_a;
-
-          while(result_b !== textbox){
+            
+            num = 0;
+          while(num < 10){
             textbox = textbox.replace(nn,nu);
             textbox = textbox.replace(saki,chaki);
             textbox = textbox.replace(ne,nu);
@@ -72,6 +73,7 @@
             result_b = result_b.replace(saki,chaki);
             result_b = result_b.replace(ne,nu);
             result_b = result_b.replace(na,nya);
+              num = num + 1;
           }
 
           target.innerText = textbox;
